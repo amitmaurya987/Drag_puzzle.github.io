@@ -82,19 +82,17 @@ function load_data(){
         }
     }
 
-
-    function dragStart() {
+//drag start
+    function dragStart(){
 
         this.classList.add('border-dot');
-        //this.classList.add('drop');
-        this.cloneNode(true);
-        dropItem = this.cloneNode(true);
+        this.classList.add('drop');
+        
     }
 
-
+//drag End
     function dragEnd() {
-
-      //  this.classList.remove('border-dot');
+      this.classList.remove('border-dot');
 
     }
 
@@ -102,7 +100,6 @@ function load_data(){
     function dragOver(e) {
 
         e.preventDefault();
-
         this.classList.add('border-greeen');
 
     }
@@ -117,10 +114,7 @@ function load_data(){
 
     function drovBox() {
 
-
-        dropItem.classList.remove('border-dot')
-        this.appendChild(dropItem);
-      //  this.appendChild(document.querySelector('.drop'));
+        this.appendChild(document.querySelector('.drop'));
         this.classList.remove('border-greeen');
         remove();
 
